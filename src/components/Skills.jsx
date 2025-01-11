@@ -1,13 +1,14 @@
 import React from 'react'
 
 const skills = [
-  { name: 'HTML', imgSrc: '/html.png' },
-  { name: 'CSS', imgSrc: '/css.png' },
-  { name: 'JavaScript', imgSrc: '/javascript.png' },
-  { name: 'PHP', imgSrc: '/php.png' },
-  { name: 'Python', imgSrc: '/python.png' },
-  { name: 'MySQL', imgSrc: '/mysql.png' }
+  { name: 'HTML', imgSrc: import.meta.env.MODE === 'production' ? '/html.png' : './html.png' },
+  { name: 'CSS', imgSrc: import.meta.env.MODE === 'production' ? '/css.png' : './css.png' },
+  { name: 'JavaScript', imgSrc: import.meta.env.MODE === 'production' ? '/javascript.png' : './javascript.png' },
+  { name: 'PHP', imgSrc: import.meta.env.MODE === 'production' ? '/php.png' : './php.png' },
+  { name: 'Python', imgSrc: import.meta.env.MODE === 'production' ? '/python.png' : './python.png' },
+  { name: 'MySQL', imgSrc: import.meta.env.MODE === 'production' ? '/mysql.png' : './mysql.png' }
 ];
+
 
 const Skills = () => {
   return (
